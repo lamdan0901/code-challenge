@@ -1,0 +1,58 @@
+<!-- Input Group Component Template -->
+<div class="input-group">
+  <label for="{{INPUT_ID}}" class="input-label">
+    <span>{{LABEL_TEXT}}</span>
+  </label>
+
+  <div class="amount-input-container">
+    <input
+      type="text"
+      id="{{INPUT_ID}}"
+      class="amount-input"
+      placeholder="{{PLACEHOLDER}}"
+      {{READONLY_ATTR}}
+      autocomplete="off"
+    />
+
+    <div class="token-selector" id="{{TOKEN_SELECTOR_ID}}">
+      <div class="selected-token" id="{{SELECTED_TOKEN_ID}}">
+        <img src="" alt="" class="token-icon" id="{{TOKEN_ICON_ID}}" />
+        <span class="token-symbol" id="{{TOKEN_SYMBOL_ID}}">Select</span>
+        <svg class="dropdown-arrow" viewBox="0 0 24 24">
+          <path d="M7 10l5 5 5-5z" />
+        </svg>
+      </div>
+
+      <div class="token-dropdown" id="{{TOKEN_DROPDOWN_ID}}">
+        <div class="token-search">
+          <div class="search-input-container">
+            <input
+              type="text"
+              placeholder="Search tokens..."
+              id="{{TOKEN_SEARCH_ID}}"
+            />
+            <button
+              type="button"
+              class="search-clear-button"
+              id="{{SEARCH_CLEAR_ID}}"
+              style="display: none"
+              aria-label="Clear search"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="token-list" id="{{TOKEN_LIST_ID}}"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-footer">
+    <span class="usd-value" id="{{USD_VALUE_ID}}">$0.00</span>
+    <span class="error-message" id="{{ERROR_ID}}"></span>
+  </div>
+</div>

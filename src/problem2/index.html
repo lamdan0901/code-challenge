@@ -1,27 +1,52 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Modern currency swap application with real-time rates"
+    />
+    <title>Currency Swap</title>
+    <meta
+      name="description"
+      content="Currency Swap - Professional Trading Interface"
+    />
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fancy Form</title>
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- You may add more stuff here -->
-  <link href="style.css" rel="stylesheet" />
-</head>
+    <!-- Styles -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
+    <div id="app">
+      <div id="loading-container"></div>
 
-  <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
-  <form onsubmit="return !1">
-    <h5>Swap</h5>
-    <label for="input-amount">Amount to send</label>
-    <input id="input-amount" />
+      <main class="main-container" style="display: none">
+        <div class="swap-container">
+          <div id="header-container"></div>
+          <form class="swap-form" id="swap-form">
+            <div id="from-input-container"></div>
+            <div id="swap-button-container"></div>
+            <div id="to-input-container"></div>
+            <div id="exchange-rate-container"></div>
+          </form>
+        </div>
+        <div id="transaction-status-container"></div>
+      </main>
+    </div>
 
-    <label for="output-amount">Amount to receive</label>
-    <input id="output-amount" />
+    <!-- Application Initialization -->
+    <script type="module" src="./app-init.js"></script>
 
-    <button>CONFIRM SWAP</button>
-  </form>
-  <script src="script.js"></script>
-</body>
-
+    <!-- Main Application Script -->
+    <script type="module" src="./script.js"></script>
+  </body>
 </html>
